@@ -25,11 +25,14 @@ public class Admin {
 	 * 1. 관리자 계정인지 검증을 한다.
 	 * 2. 관리자 메뉴를 보여준다.
 	 */
-	public void main() throws IOException {
+	
+	//매서드를 대신해 생성자를 명시하여 코드 간결화
+	//public void main() throws IOException {
+	public Admin() throws IOException {
 		br = new BufferedReader(
 				new InputStreamReader(System.in));
 		
-		findReservations();
+		//findReservations();
 		if (validate()) {
 			menu();
 		}
@@ -97,7 +100,6 @@ public class Admin {
 		}
 	}
 	
-
 	/*
 	 * 1.신규 도서 등록창 뜬다.
 	 * 2.도서명과 카테고리 입력창 뜬다.

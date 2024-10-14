@@ -52,14 +52,18 @@ public class Main {
 		if(no ==1){//관리자
 			System.out.println("\r\n");
 			Admin admin = new Admin();
-			admin.main();
+			//매서드를 대신해 생성자를 명시하여 코드 간결화
+			//admin.main();
+			
+			
 		}else {//사용자
 			
 		}
 	}
 	
-	
 	public static void main(String[] args) {
-		new Main();
+		//실질적으로 실행되는 부분, 객체로 생성해서 호출하려고 함
+		//->class 내부에서 클래스 이름과 똑같은 이름을 가진 생성자를 호출
+		Main main = new Main();
 	}
 }
