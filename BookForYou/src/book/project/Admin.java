@@ -20,6 +20,9 @@ public class Admin {
 	private BookDAO bookDAO = new BookDAO();
 	private CustomerDAO customerDAO = new CustomerDAO();
 	private ReservationDAO reservationDAO = new ReservationDAO();
+	private CustomerDTO customerDTO = new CustomerDTO();
+	
+	
 	
 	/*
 	 * 1. 관리자 계정인지 검증을 한다.
@@ -225,7 +228,14 @@ public class Admin {
 			String input = br.readLine();
 			
 			if(input.equals("1")){
-				System.out.println("검색");
+				System.out.println("회원 아이디를 입력해주세요: ");
+				String user_id = br.readLine();
+				if(br.readLine() == user_id) {
+					System.out.println(user_id);
+				}else{
+					System.out.println("회원 아이디를 확인해주세요.");					
+				}
+				
 			} else if (input.equals("<")){
 				if (index == 0) {
 					System.out.println("이전 페이지 없음.");
